@@ -26,6 +26,6 @@ public class CategoryService {
     }
 
     public Category getCategoryByTitle(String title) {
-        return categoryRepository.findOneByTitle(title);
+        return categoryRepository.findOneByTitleIgnoreCase(title);
     }
 }

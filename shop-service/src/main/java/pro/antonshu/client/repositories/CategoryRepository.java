@@ -8,6 +8,7 @@ import pro.antonshu.client.entities.Category;
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     Category findOneByTitle(String title);
+    Category findOneByTitleIgnoreCase(String title);
 
     boolean existsByTitle(String title);
 }
